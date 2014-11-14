@@ -8,11 +8,16 @@ package be.vdab.winkel;
  *
  * @author Andy.mertens
  */
-import java.math.BigDecimal;
+
 public class Product {
     private String omschrijving;
-    private BigDecimal prijs;
+    private double prijs;
 
+    public Product(String omschrijving, double prijs){
+        this.omschrijving = omschrijving;
+        this.prijs = prijs;
+    }
+    
     /**
      * @return the omschrijving
      */
@@ -23,7 +28,7 @@ public class Product {
     /**
      * @return the prijs
      */
-    public BigDecimal getPrijs() {
+    public double getPrijs() {
         return prijs;
     }
         

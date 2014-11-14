@@ -49,7 +49,7 @@ public class Mand {
         Iterator i = artikelen.entrySet().iterator();
         while(i.hasNext()){
             Product Prod = (Product)i.next();
-            totaalBedrag+=Prod.getPrijs().doubleValue() * artikelen.get(Prod).doubleValue();
+            totaalBedrag+=Prod.getPrijs() * artikelen.get(Prod);
         }
         return totaalBedrag;
     }
