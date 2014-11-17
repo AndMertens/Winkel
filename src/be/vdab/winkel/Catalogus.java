@@ -14,11 +14,11 @@ import java.util.ListIterator;
  * @param <Product>
   */
 public class Catalogus<Product> {
-    LinkedList<Product> productCatalogus;
+    LinkedList<Product> productCatalogus= new LinkedList<>();
     
     public Catalogus(List <Product> lijstProdukten){
         if(!(lijstProdukten.isEmpty()))
-                this.productCatalogus.addAll(lijstProdukten);
+                productCatalogus.addAll(lijstProdukten);
         else
             this.productCatalogus = null;
     } 
@@ -32,11 +32,11 @@ public class Catalogus<Product> {
             this.productCatalogus = null;
     } 
     
-    public ListIterator ListIterator(int index){
+    public Product getProduct(int index){
         if(index==0)
-            return productCatalogus.listIterator();
+            return (Product)productCatalogus.getFirst();
         else    
-            return productCatalogus.listIterator(index);
+            return (Product)productCatalogus.get(index);
     }
     
 }
